@@ -83,7 +83,7 @@ int opcao, opcao2;
     printf("Número de Pontos Turisticos: %d\n", pontosTuristicos2);
 
 #####################################################################################*/
-
+    // DECLARANDO VARIAVEIS JÁ COM OS VALORES DE CADA UMA
     char name[10] = "Vicosa";
     char nome[10] = "Coimbra";
     int pop = 5000, pop1 = 6000, opcao;
@@ -91,6 +91,7 @@ int opcao, opcao2;
     float PIB = 3000, PIB1 = 4500;
     int Tur = 12, Tur1 = 8;
 
+    //EXIBINDO AS INFORMAÇÕES DE CADA VARIÁVEL QUE FOI ATRIBUIDA ANTERIORMENTE
     printf("====================***====================\n");
     printf("INFORMAÇÕES DA CARTA 1:\n");
     printf("Nome da cidade = %s \n", name);
@@ -108,18 +109,25 @@ int opcao, opcao2;
     printf("PIB: %.2f\n", PIB1);
     printf("Número de Pontos Turisticos: %d\n", Tur1);
 
+    //APENAS PARA INDICAR QUE IRÁ COMEÇAR AS COMPARAÇÕES
     printf("\n");
     printf("====================***====================\n");
     printf("\n");
     printf("####   AGORA VAMOS INICIAR O JOGO    ####\n");
     printf("\n");
 
+    //EXIBINDO UM MENU DE OPÇÕES PARA ESCOLHE, ARMAZENANDO A ESCOLHA
+    //NA VARIAVEL OPCAO.
     printf("Escolha a seguir qual atributo deseja comparar:\n");
     printf("1. População\n2. Área (em km²)\n3. PIB\n4. Pontos Turisticos\n");
     scanf("%d", &opcao);
 
+    //APENAS PARA VER SE A ESCOLHA FOI ARMAZENADA CORRETAMENTE
     printf("Opção escolhida: %d\n", opcao);
 
+
+    //UTILIZANDO O SWITCH PARA ORGANIZAR O CÓDIGO E EXECUTAR APENAS
+    //O CODIGO QUE CORRESPONDA A ESCOLHA DO USUÁRIO
     switch (opcao)
     {
     case 1:
@@ -130,22 +138,30 @@ int opcao, opcao2;
         
         break;
     case 2:
-        printf("Teste");
+        if (ar > ar1)
+        {
+            printf("Carta 1 %s é a VENCEDORA!", name);
+        } else printf("Carta 2 %s é a VENCEDORA!", nome);
+        
+        break;
+    case 3:
+        if (PIB > PIB1)
+        {
+            printf("Carta 1 %s é a VENCEDORA!", name);
+        } else printf("Carta 2 %s é a VENCEDORA!", nome);
+        
+        break;
+    case 4:
+        if (Tur > Tur1)
+        {
+            printf("Carta 1 %s é a VENCEDORA!", name);
+        } else printf("Carta 2 %s é a VENCEDORA!", nome);
+
+        break;
+        
     default:
         break;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     return 0;
 }
@@ -158,7 +174,8 @@ int opcao, opcao2;
 
 
 
-
+    //O CODIGO ABAIXO É UTILIZANDO VARIÁVEIS DA QUAL O PROPRIO
+    //USUARIO REALIZOU A INSERÇÃO DOS VALORES MANUALMENTE
     /*
     printf("\n");
     printf("====================***====================\n");
