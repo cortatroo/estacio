@@ -10,6 +10,15 @@ int pontosTuristicos, pontosTuristicos2;
 float area, pib, area2, pib2;
 int opcao, opcao2;
 
+###########################################################################
+COMANDO PARA GERAR NUMEROS ALEATORIOS, NESTE CASO SERÃO NÚMEROS ENTRE 1 E 100
+INCLUIR AS DUAS BIBLIOTECAS ABAIXO PARA PODER GERAR NÚMEROS ALEATÓRIOS
+#include <stdlib.h>
+#include <time.h>
+srand (time(0));
+numeroComputador = rand() % 100 + 1;
+
+############################################################################
 
     // Cadastro das Cartas:
     // Lógica para solicitar ao usuário que insira os dados da CARTA 1
